@@ -124,7 +124,7 @@ Error generating stack: `+e.message+`
         <p><strong>Área de Interesse:</strong> ${s.area}</p>
         <p><strong>Mensagem:</strong></p>
         <p>${s.mensagem}</p>
-      `;if((await fetch("https://api.emailjs.com/api/v1.0/email/send",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({service_id:"default_service",template_id:"template_contact",user_id:"public_key",template_params:{to_email:"juridicosantosadv@gmail.com",from_name:s.nome,from_email:s.email,phone:s.telefone,area:s.area,message:s.mensagem,reply_to:s.email}})})).ok)alert("Mensagem enviada com sucesso! Entraremos em contato em breve."),x({nome:"",telefone:"",email:"",area:"",mensagem:""});else throw new Error("Erro no envio")}catch{const M=`Nova solicitação de consulta - ${s.nome}`,S=`
+      `;if((await fetch("https://api.emailjs.com/api/v1.0/email/send",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({service_id:"default_service",template_id:"template_contact",user_id:"public_key",template_params:{to_email:"juridicoadvsantos@gmail.com",from_name:s.nome,from_email:s.email,phone:s.telefone,area:s.area,message:s.mensagem,reply_to:s.email}})})).ok)alert("Mensagem enviada com sucesso! Entraremos em contato em breve."),x({nome:"",telefone:"",email:"",area:"",mensagem:""});else throw new Error("Erro no envio")}catch{const M=`Nova solicitação de consulta - ${s.nome}`,S=`
 Nome: ${s.nome}
 Telefone: ${s.telefone}
 E-mail: ${s.email}
